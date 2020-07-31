@@ -12,6 +12,8 @@
   <!-- Custom Fonts -->
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css?q={{time}}">
+  
 </head>
 
 <body>
@@ -22,11 +24,22 @@
         <title>Welcome!</title>
     </head>
     <body>
-        <h1>Ok here is the recipe we got for you!}</h1>
-        <form method="post" action="/index">>
-            <input type="text" name="index" placeholder="Back to the beginning?"/>
-            <input type="submit" value="Submit"/>
-        
+        <img src="https://img.freepik.com/free-vector/hand-drawn-abstract-modern-cartoon-cooking-studio-class-illustrations-recipe-cooking-card-templete-with-handwritten-calligraphy-quotes-isolated-white-background_200084-94.jpg?size=626&ext=jpg">
+
+        <h1>Ok here is the recipe we got for you!</h1>
+        <a target="_blank" href="{{final_recipe}}">{{final_recipe}}</a>
+ 
+        <h3>Clink the link above to get the recipe! </h3?
+        <form method="post" action="/index">
+        <button onclick="goBack()">Back to Start</button>
+            <script>
+            function goBack() {
+            window.history.back();
+            window.history.back();
+            window.history.back();
+            window.history.back();
+            }
+            </script>
     </body>
 </html>
 

@@ -27,18 +27,31 @@ def results():
 @app.route('/course', methods= ['GET', 'POST'])
 def course():
     course = request.form["course"]
+    meat = request.form["meat"]
     food = user_course(course)
-    return render_template("course.html", course=course, food=food,time=datetime.now())
+    print(meat)
+    return render_template("course.html", course=course, meat=meat, food=food,time=datetime.now())
 
 @app.route('/health', methods= ['GET', 'POST'])
 def health():
+    course = request.form["course"]
+    meat = request.form["meat"]
     health = request.form["health"]
     sweet = user_health(health)
-    return render_template("health.html", health=health, sweet=sweet,time=datetime.now())
+    return render_template("health.html", health=health, sweet=sweet, course=course, meat=meat, time=datetime.now())
 
 
 @app.route('/recipe', methods= ['GET', 'POST'])
 def recipe():
+    # recipe = request.form["recipe"]
+    # final = user_meat(recipe)
+    course = request.form["course"]
+    meat = request.form["meat"]
+    health = request.form["health"]
     recipe = request.form["recipe"]
-    final = user_meat(recipe)
-    return render_template("recipe.html", recipe=recipe, final=final, time=datetime.now())
+    print(recipe)
+    print(meat)
+    print(course)
+    print(health)
+    final_recipe = user_recipe(recipe, course, health)
+    return render_template("recipe.html", recipe=recipe, health=health, course=course, meat=meat, final_recipe=final_recipe, time=datetime.now())

@@ -12,6 +12,7 @@
   <!-- Custom Fonts -->
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css?q={{time}}">
 </head>
 
 <body>
@@ -22,14 +23,16 @@
         <title>Welcome!</title>
     </head>
     <body>
-        <h1>{{food}}</h1>
+        <img src="https://lh3.googleusercontent.com/proxy/jR0KW0TO7aQWVttRfutY9sqizIBNXmD5oSbj5qfKUIhtZTvE1QO7dK2MJ-Ib73Z7KwtRPvWc6LgPEekDWd81fCr2ji9IuzL12Pi5VYW24Ll6BkreJgeE8BUqJUR0eMqJmrMsup5YQcYV6KWzuH6Eb3IAy23K6MJ7ohmuE_fD_wUG-ATc8qDCfP4fyTVld1E">
+        <h2>{{food}}</h2>
+        <h1>Savory or Sweet?</h1>
         <form method="post" action="/health">>
             <input type="text" name="health" placeholder="Savory or sweet?"/>
             <input type="submit" value="Submit"/>
+            <input value="{{meat}}" style="display: none;" type="text" name="meat" />
+            <input value="{{course}}" style="display: none;" type="text" name="course" />
+        </form>
         
     </body>
-</html>
-
-</body>
 
 </html>

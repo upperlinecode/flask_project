@@ -29,7 +29,7 @@ def user_health(health):
     else:
         return "That wasn't an option..."
 
-def user_recipe(recipe):
+def user_recipe(user_meat, user_course, user_health):
     if user_meat == "yes":
         if user_course == "breakfast":
             if user_health == "savory":
