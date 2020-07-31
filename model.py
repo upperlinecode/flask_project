@@ -54,7 +54,7 @@ def user_recipe(recipe):
                 return "https://cookieandkate.com/whole-wheat-banana-pancakes-recipe/"
         elif user_course == "dinner":
             if user_health == "savory":
-                return "https://www.feastingathome.com/orecchiette-pasta-with-broccoli-sauce/
+                return "https://www.feastingathome.com/orecchiette-pasta-with-broccoli-sauce/"
             elif user_health == "sweet":
                 return "https://minimalistbaker.com/banana-cream-pie-vegan-gf/"
         elif user_course == "lunch":
